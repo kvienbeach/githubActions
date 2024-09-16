@@ -1,6 +1,12 @@
 name: reusable workflow
 on: 
-  workflow_dispatch:
+  #workflow_dispatch:
+  workflow_call:
+        inputs:
+          node-version:
+            description: "Node version to use"
+            required: false  # This is optional; set to true if you want to enforce it
+            default: 'lts/*'  # Default value
 
 jobs:
   run-npm-test:
@@ -11,7 +17,7 @@ jobs:
         - name : setup node
           uses: actions/setup-node@v3
           with:
-            node-version: 'lts/*'
+            node-version: ${{ inputs.node-version }}  # Use the input value 
         - name: run test
           shell: bash
           run: |
