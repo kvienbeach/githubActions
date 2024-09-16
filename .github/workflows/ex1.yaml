@@ -6,4 +6,24 @@ jobs:
   job1:
     runs-on: ubuntu-latest
     steps: 
-      # TO COMPLETE   
+      - name: checkout repository
+        uses: actions/checkout@v4
+      - name: Setup Node lts
+        uses: actions/setup-node@v4
+        with: 
+          node-version: 'latest'
+      - name:  npm install
+        run : npm install
+  job2:
+    runs-on: ubuntu-latest
+    steps: 
+      - name: checkout repository
+        uses: actions/checkout@v4
+      - name: Setup Node lts
+        uses: actions/setup-node@v4
+        with: 
+          node-version: 'latest'
+        needs: job1
+      - name:  npm test
+        run : npm test
+           
