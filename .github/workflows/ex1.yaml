@@ -11,7 +11,7 @@ jobs:
       - name: Setup Node lts
         uses: actions/setup-node@v4
         with: 
-          node-version: 'latest'
+          node-version: 'lts/*'
       - name:  npm install
         run : npm install
   job2:
@@ -23,7 +23,7 @@ jobs:
       - name: Setup Node lts
         uses: actions/setup-node@v4
         with: 
-          node-version: 'latest'
+          node-version: 'lts/*'
       - name:  npm test
         run : npm install
            
