@@ -26,7 +26,8 @@ jobs:
           node-version: 'lts/*'
       - name:  npm test
         #run:  npm install && npm test
-        run: |  #multiple string
+        #multiple string
+        run: |  
           npm install
           npm test
            
