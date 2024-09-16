@@ -15,6 +15,7 @@ jobs:
       - name:  npm install
         run : npm install
   job2:
+    needs: job1
     runs-on: ubuntu-latest
     steps: 
       - name: checkout repository
@@ -23,7 +24,6 @@ jobs:
         uses: actions/setup-node@v4
         with: 
           node-version: 'latest'
-        needs: job1
       - name:  npm test
         run : npm test
            
