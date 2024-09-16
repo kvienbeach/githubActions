@@ -13,7 +13,7 @@ jobs:
         - name : setup node
           uses: actions/setup-node@v3
           with:
-            node-version: ${{NODEJS_VERSION}}
+            node-version: ${{env.NODEJS_VERSION}}
         - name: verify node-version 
           run: |
             node -v
