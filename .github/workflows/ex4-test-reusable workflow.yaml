@@ -7,6 +7,6 @@ on: push
 
 jobs:
   call-reusable-workflow:
-    uses: ./.github/workflows/ex4.yaml@main #${{ github.repository }}/.github/workflows/ex4.yaml@main #USER_OR_ORG_NAME/REPO_NAME/.github/workflows/reusable-workflow.yml@main  # Update with your repo details
+    uses: ./.github/workflows/ex4.yaml #${{ github.repository }}/.github/workflows/ex4.yaml@main #USER_OR_ORG_NAME/REPO_NAME/.github/workflows/reusable-workflow.yml@main  # Update with your repo details
     with:
       node-version: '14.x'  # Optional, can be omitted to use the default 'lts/*'
