@@ -6,8 +6,6 @@ jobs:
   run-npm-test:
     runs-on: ubuntu-latest
     steps:
-        - env:
-           NODEJS_VERSION: 14
         - name: checkout
           uses: actions/checkout@v3
         - name : setup node
