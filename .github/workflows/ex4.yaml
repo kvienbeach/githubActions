@@ -7,6 +7,7 @@ on:
             description: "Node version to use"
             required: false  # This is optional; set to true if you want to enforce it
             default: 'lts/*'  # Default value
+            type: string
 
 jobs:
   run-npm-test:
